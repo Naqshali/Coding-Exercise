@@ -1,3 +1,12 @@
+**Kindly Follow these steps to run this project
+Steps:**
+1 - Clone this project 
+2 - Inside this project folder, run command `npm install`
+3 - After the complete dependencies installed, run command ng-serve
+
+**Note: **
+
+
 # ContactsBox
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.4.
