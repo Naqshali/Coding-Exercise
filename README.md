@@ -1,5 +1,5 @@
 **Kindly Follow these steps to run this project
-Steps:**
+# Steps:**
 1 - Clone this project 
 2 - Inside this project folder, run command `npm install`
 3 - After the complete dependencies installed, run command ng-serve
