@@ -1,6 +1,7 @@
 # Kindly Follow these steps to run this project
-# Steps:
-1 - Clone this project.
+# Steps
+
+1 - Clone this project https://github.com/Naqshali/Coding-Exercise.git.
 2 - Inside this project folder, run command `npm install`.
 3 - After the complete dependencies installed, run command ng-serve.
 
