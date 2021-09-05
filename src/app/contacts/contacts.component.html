@@ -1,0 +1,84 @@
+<div class="main-container">
+    <div class="row p22p">
+        <div class="col-md-5 contact-bg">
+            <div class="container">
+                <h2>Contacts</h2>
+                <div class="panel panel-default">
+                    <!-- <div class="panel-heading">Panel Heading</div> -->
+                    <div class="mb5">
+                        <input type="text" class="form-control search-contact" placeholder="Search contact by Name" [(ngModel)]="contactsObj.search">
+                    </div>
+                    <div class="panel-body">
+                        <div class="list-group" *ngFor="let con of contactsObj.list | filter: contactsObj.search;index as ind">
+                            <span class="list-group-item list-group-item-action cursor-pointer" [ngClass]="{'selected-item':contactsObj.selectedContact.id==con.id}" style="float: right;" (click)="setSelectedContactInfo(con)">
+                                <span class="pull-left">
+                                    <img *ngIf="con.gender=='Female'" src="../../assets/images/patient_female.png" alt="" height="38px">
+                                    <img *ngIf="con.gender=='Male'" src="../../assets/images/patient_male.png" alt="" height="38px">
+                                </span>
+                                <span class="ml10 pull-left">
+                                    <div>{{con.first_name}} {{con.last_name}}</div>
+                                    <div class="fs12">{{con.designation}}</div>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7 contact-detail-bg">
+            <div class="container">
+                <!-- <h2>Contact</h2> -->
+                <div class="panel panel-default">
+                    <!-- <div class="panel-heading">Panel Heading</div> -->
+                    <div class="panel-body">
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <img *ngIf="contactsObj.selectedContact.gender=='Female'" src="../../assets/images/patient_female.png" alt="" height="100px">
+                                <img *ngIf="contactsObj.selectedContact.gender=='Male'" src="../../assets/images/patient_male.png" alt="" height="100px">
+                            </div>
+                            <div class="col-md-9 mt26">
+                                <div class="fs25">{{contactsObj.selectedContact.first_name}} {{contactsObj.selectedContact.last_name}}</div>
+                                <div>{{contactsObj.selectedContact.gender}}</div>
+                            </div>
+                        </div>
+                        <div class="mt30">
+                            <div class="form-group row mt15">
+                                <div class="col-md-3 default-color">
+                                    Bio:
+                                </div>
+                                <div class="col-md-9">
+                                    {{contactsObj.selectedContact.bio}}
+                                </div>
+                            </div>
+                            <div class="form-group row mt15">
+                                <div class="col-md-3 default-color">
+                                    Email:
+                                </div>
+                                <div class="col-md-9">
+                                    <div [ngClass]="{'mt15': ind>0}" *ngFor="let em of contactsObj.selectedContact.emails;index as ind">{{em.email}}</div>
+                                </div>
+                            </div>
+                            <div class="form-group row mt15">
+                                <div class="col-md-3 default-color">
+                                    Phone:
+                                </div>
+                                <div class="col-md-9">
+                                    {{contactsObj.selectedContact.phone}}
+                                </div>
+                            </div>
+                            <div class="form-group row mt15">
+                                <div class="col-md-3 default-color">
+                                    Address:
+                                </div>
+                                <div class="col-md-9">
+                                    {{contactsObj.selectedContact.phone}}{{contactsObj.selectedContact.address}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-email-addresses (shareEmailData)="shareEmailData($event)"></app-email-addresses>
