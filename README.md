@@ -4,10 +4,13 @@
 1 - Clone this project https://github.com/Naqshali/Coding-Exercise.git.
 
 2 - Inside this project folder, run command `npm install`.
+
 3 - After the complete dependencies installed, run command ng-serve.
 
 ****Note: ****
+
 You can see mock apis at this link :
+
 https://mockapi.io/projects/6132387bab7b1e001799b3e7
 
 
