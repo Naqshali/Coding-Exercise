@@ -1,8 +1,8 @@
 # Kindly Follow these steps to run this project
 # Steps:
-1 - Clone this project 
-2 - Inside this project folder, run command `npm install`
-3 - After the complete dependencies installed, run command ng-serve
+1 - Clone this project.
+2 - Inside this project folder, run command `npm install`.
+3 - After the complete dependencies installed, run command ng-serve.
 
 ****Note: ****
 You can see mock apis at this link :
